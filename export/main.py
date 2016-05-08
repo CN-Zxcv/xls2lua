@@ -314,7 +314,7 @@ def export_lua(t):
 			f = open(path +"/../_out/client/config"+name+v+".lua", "w")
 			rows = ""
 			for rowid, row in enumerate(t["client_sheet"]):
-				rows += tplc("    <<k>>=<<v>>,\n",{"k":row[0],"v":row[idx+1]})
+				rows += tplc("    [<<k>>]=<<v>>,\n",{"k":row[0],"v":row[idx+1]})
 			content = tplc(tpl_language, {"content":rows,"name":name})
 			f.write(content)
 			f.close()
