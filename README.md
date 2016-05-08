@@ -19,10 +19,12 @@ export_all.cmd 导出所有配置表
 导出后
 ```lua
 -- client side
+require("defineExample")
 require("configExample")
 local name = resmng.configExample[resmng.ITEM_1].Name --auto change to specific language by using meta
 
 -- server side
+require("defineExample")
 require("configExample")
 local name = resmng.configExample[resmng.ITEM_1].ID
 ```
